@@ -29,7 +29,7 @@ char **split_line(char *line)
 {
 	char *dup_line;
 	char *token;
-	char *toks;
+	char *t;
 	char **tok;
 	int i = 1;
 
@@ -42,12 +42,12 @@ char **split_line(char *line)
 	}
 	free(line);
 	tok = malloc(sizeof(char *) * i + 1);
-	toks = strtok(dup_line, TOK_DELIM);
+	t = strtok(dup_line, TOK_DELIM);
 	i = 0;
-	while (toks != '\0')
+	while (t != '\0')
 	{
-		tok[i] = toks;
-		toks = strtok(NULL, TOK_DELIM);
+		tok[i] = t;
+		t = strtok(NULL, TOK_DELIM);
 		i++;
 	}
 	tok[i] = '\0';
