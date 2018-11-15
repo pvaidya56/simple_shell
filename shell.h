@@ -9,10 +9,11 @@
 #include <sys/stat.h>
 #include <stdlib.h>
 #include <stddef.h>
-
+void _loop(void);
 #define TOK_DELIM " \n\a\t"
+int _getchar(void);
+char *_getline(void);
 void prompt(void);
-char *read_line(void);
 char **split_line(char *line);
 int _strcmp(char *s1, char *s2);
 int _strlen(char *s);
