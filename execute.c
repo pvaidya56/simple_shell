@@ -1,8 +1,10 @@
 #include "shell.h"
 /**
- *
- *
- *
+ *execute - entry point
+ *Description: execute after fork
+ *@combine: combine directory and input
+ *@input: input command
+ *Return: status of the process
  */
 
 int execute(char *combine, char **input)
@@ -14,17 +16,17 @@ int execute(char *combine, char **input)
 	if (pid == 0)
 	{
 		status = execve(combine, input, NULL);
-		exit(status);
-/*	if ((execve(input[0], input, NULL)) == -1)
+		if (status == -1)
 		{
-			perror("Execution error: ");
-			return(-1);
-			} */
+			write(STDERR_FILENO, "Error: execve error\n", 6);
+			exit(status);
+		}
+
 	}
 	else if (pid < 0)
 	{
 		perror("No process: ");
-		return(-1);
+		return (-1);
 	}
 	else /* parrent*/
 	{
