@@ -2,7 +2,7 @@
 /**
  * get_line - function with no args
  *
- * Description: get line from cmd
+ * Description: get line from command input and test for EOF
  * Return: buffer
  */
 char *get_line(void)
