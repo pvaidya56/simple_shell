@@ -1,5 +1,25 @@
 #include "shell.h"
 /**
+ * get_line - function with no args
+ *
+ * Description: get line from cmd
+ * Return: buffer
+ */
+char *get_line(void)
+{
+	char *buf = NULL;
+	size_t bufsize = 0;
+	int test;
+
+	test = getline(&buf, &bufsize, stdin);
+	if (test == EOF)
+	{
+		write(1, "\n", 1);
+		_exit(1);
+	}
+	return (buf);
+}
+/**
  * split_line - entry point
  * @line: command input
  * Description: split the command line into tokens or parsing the line

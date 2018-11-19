@@ -5,25 +5,38 @@
  */
 void _loop(char **env)
 {
-	char *line = NULL;
-	char **args = NULL;
-	char **directory = NULL;
-	char *s = NULL;
+	char *line;
+	char **args;
+	char **directory;
+	char *combine;
 
-	do {
+	while (1)
+	{
 		prompt();
 		line = _getline();
+		if (line == "\0")
 		{
-			if (line[0] == '\n')
-			{
-				free(line);
-				continue;
-			}
+			free(line);
+			continue;
+		}
 		args = split_line(line);
+
+/**		if (access(args[0], F_OK) != 0 && access(args[0], X_OK) != 0)
+			combine = get_PATH_token(args[0]);
+		printf("command is %s\n", args[0]);
+		printf("combine is %s\n", combine);
+		if (combine)
+			args[0] = combine;
+		printf("command after change is %s\n", args[0]);
+		launch = execute(args); */
 		directory = dir_only(env);
-		s = check_path(directory, args[0]);
-		built_in_check(s, args);
-		if (s == NULL)
-			perror(s);
-	} while(1);
+		combine = check_path(directory, args[0]);
+		built_in_check(combine, args);
+		if (combine == NULL)
+			perror(combine);
+	}
+	free(line);
+	free(args);
+	free(directory);
+	free(combine);
 }

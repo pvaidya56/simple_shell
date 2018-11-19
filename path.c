@@ -2,8 +2,9 @@
 
 /**
  *path_concate - Entry point
- *@directory : string 1
- *@argument: string 2
+ *Description: combine directory from PATH to the command
+ *@directory : directory
+ *@argument: input command
  *Return: pointer contain the string 1 and 2
  */
 char *path_concate(char *directory, char *argument)
@@ -69,7 +70,7 @@ char *get_env(char **env)
 		c++;
 	}
 	len = _strlen(start);
-	buf = malloc(sizeof(char) * len + 1 + 8);
+	buf = malloc(sizeof(char) * len + 9);
 
 	c = 5;
 	b = 0;
@@ -77,10 +78,10 @@ char *get_env(char **env)
 	{
 		if (start[c] == ':')
 		{
-			buf[k] = '/';
-			k++;
+			buf[b] = '/';
+			b++;
 		}
-		buf[k] = start[c];
+		buf[b] = start[c];
 		c++;
 		b++;
 	}
@@ -132,7 +133,7 @@ char *check_path(char **directory, char *input)
 
 	while (*directory != '\0')
 	{
-		path = path_concate(*directory, *input);
+		path = path_concate(*directory, input);
 		if (stat(path, &st) == 0)
 			return (path);
 		directory++;

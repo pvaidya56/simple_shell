@@ -1,11 +1,10 @@
 #include "shell.h"
-
 /**
  *_strcmp - entry point
  *@s1: string 1
  *@s2: string 2
- *Description: compare 2 strings
- *Return: 0, -1, 1
+ *Description: compare 2 strings for matching
+ *Return: 0 if success, -1 for fail
  */
 int _strcmp(char *s1, char *s2)
 
@@ -50,7 +49,7 @@ char *_strdup(char *str)
 {
 	int index;
 	int size;
-	char *s;
+	char *s = NULL;
 
 	if (str == 0)
 		return (NULL);

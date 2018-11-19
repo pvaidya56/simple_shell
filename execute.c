@@ -5,30 +5,30 @@
  *
  */
 
-int execute(char *s, char **input)
+int execute(char *combine, char **input)
 {
-	pid_t child, wait_p;
-	int status;
+	pid_t pid;
+	int status = 0;
 
-	child = fork();
-	if (child == 0)
+	pid = fork();
+	if (pid == 0)
 	{
-		status = execve(s, input, NULL);
-		if (status == -1);
+		status = execve(combine, input, NULL);
+		exit(status);
+/*	if ((execve(input[0], input, NULL)) == -1)
 		{
-			write(STDERR_FILENO, "built: execve error\n", 6);
+			perror("Execution error: ");
 			return(-1);
-		}
+			} */
 	}
-	else if (child < 0)
+	else if (pid < 0)
 	{
-		write(STDERR_FILENO, "built: pid error\n", 6);
-		return(-2);
+		perror("No process: ");
+		return(-1);
 	}
-	else
+	else /* parrent*/
 	{
-		wait_p = wait(&status);
+		wait(NULL);
 	}
-
 	return (status);
 }

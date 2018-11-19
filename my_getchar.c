@@ -6,7 +6,7 @@
  */
 int _getchar(void)
 {
-	char letter[1];
+	static char letter[1];
 	int i = read(0, letter, 1);
 
 	if (i < 1)

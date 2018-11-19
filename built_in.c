@@ -23,10 +23,10 @@ int print_env(char **input)
 {
 	int i;
 
-	if (*input != '\0')
+	if (*input)
 	{
 		i = 0;
-		while (environ[i] != NULL)
+		while (environ[i])
 		{
 			write(1, environ[i], _strlen(environ[i]));
 			write(1, "\n", 1);
