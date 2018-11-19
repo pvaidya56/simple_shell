@@ -1,7 +1,7 @@
 #include "shell.h"
 /**
  *_getchar - entry point
- *Description: create my own version of getchar, get 1 character
+ *Description: create my own version of getchar to get 1 character
  *Return: character
  */
 int _getchar(void)
