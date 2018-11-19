@@ -19,7 +19,7 @@ void _loop(char **env);
 int _getchar(void);
 char *get_line(void);
 char *str_concate(char *s1, char *s2);
-char *get_PATH_token(char* command);
+char *get_PATH_token(char *command);
 char *_getline(void);
 void prompt(void);
 char **split_line(char *line);
