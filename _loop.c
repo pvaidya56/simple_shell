@@ -15,7 +15,7 @@ void _loop(char **env)
 	{
 		prompt();
 		line = _getline();
-		if (line == "\0")
+		if (line == NULL)
 		{
 			free(line);
 			continue;
