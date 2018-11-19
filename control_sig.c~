@@ -1,0 +1,8 @@
+#include "shell.h"
+
+void control_sig(int sig)
+{
+	(void)sig;
+	write(0, "\n", 1);
+	prompt();
+}

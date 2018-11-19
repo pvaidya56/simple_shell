@@ -1,24 +1,24 @@
 #include "shell.h"
 /**
- *read_line - entry point
- *Description: read entered command line
- *Return: line
+ * get_line - function with no args
+ *
+ * Description: get line from cmd
+ * Return: buffer
  */
-char *read_line(void)
+char *get_line(void)
 {
-	char *line = NULL;
+	char *buf = NULL;
 	size_t bufsize = 0;
-	int checkline;
+	int test;
 
-	checkline = getline(&line, &bufsize, stdin);
-	if (checkline == EOF)
+	test = getline(&buf, &bufsize, stdin);
+	if (test == EOF)
 	{
 		write(1, "\n", 1);
-		exit(1);
+		_exit(1);
 	}
-	return (line);
+	return (buf);
 }
-
 /**
  * split_line - entry point
  * @line: command input
