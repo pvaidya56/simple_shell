@@ -21,19 +21,16 @@ int myexit(char **input)
  */
 int print_env(char **input)
 {
-	int i;
+	int i, k;
 
-	if (*input)
+	for (i = 0; environ[i] != NULL; i++)
 	{
-		i = 0;
-		while (environ[i])
-		{
-			write(1, environ[i], _strlen(environ[i]));
-			write(1, "\n", 1);
-			i++;
-		}
+		k = _strlen(environ[i]);
+		write(STDOUT_FILENO, environ[i], k);
+		write(1, "\n", 1);
 	}
-	return (0);
+	(void)input;
+	return (1);
 }
 
 /**
