@@ -1,5 +1,4 @@
 #include "shell.h"
-
 /**
  *path_concate - Entry point
  *Description: combine directory from PATH to the command
@@ -102,7 +101,6 @@ char **dir_only(char **env)
 	char *tok;
 	int i;
 	char *directory;
-
 
 	directory = get_env(env);
 	i = 0;
