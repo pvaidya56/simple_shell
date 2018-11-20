@@ -30,5 +30,4 @@ void _loop(char **env)
 		if (combine == NULL)
 			perror(combine);
 	}
-	
 }
