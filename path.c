@@ -59,12 +59,12 @@ char *get_env(char **env)
 		b = 0;
 		while (env[c][b] == s[b])
 		{
-	if (env[c][b + 1] == s[b + 1])
-	{
-		start = env[c];
-		break;
-	}
-	b++;
+			if (env[c][b + 1] == s[b + 1])
+			{
+				start = env[c];
+				break;
+			}
+			b++;
 		}
 		c++;
 	}
