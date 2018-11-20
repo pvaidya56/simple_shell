@@ -1,6 +1,6 @@
 #include "shell.h"
 /**
- * get_line - function with no args
+ * get_line - Takes user input and tests 
  *
  * Description: get line from command input and test for EOF
  * Return: buffer
@@ -20,7 +20,7 @@ char *get_line(void)
 	return (buf);
 }
 /**
- * split_line - entry point
+ * split_line - Splits command line arguments
  * @line: command input
  * Description: split the command line into tokens or parsing the line
  * Return: tokens
