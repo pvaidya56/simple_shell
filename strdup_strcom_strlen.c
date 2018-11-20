@@ -1,6 +1,6 @@
 #include "shell.h"
 /**
- *_strcmp - entry point
+ *_strcmp - Compares 2 strings
  *@s1: string 1
  *@s2: string 2
  *Description: compare 2 strings for matching
@@ -20,7 +20,7 @@ int _strcmp(char *s1, char *s2)
 }
 
 /**
- *_strlen - entry point
+ *_strlen - Gets the length of a string
  *@s: value of s
  *Description: length of string
  *Return: length of string
@@ -40,7 +40,7 @@ int _strlen(char *s)
 }
 
 /**
- *_strdup - Entry point
+ *_strdup - Duplicates a string
  *@str : string
  *Return: pointer contain the copy of str
  */
