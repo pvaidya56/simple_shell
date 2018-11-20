@@ -1,4 +1,4 @@
-.TH SHELL 1
+.TH SHELL 3 11/19/2018
 .SH NAME
 shell \- simple UNIX command interpreter
 .SH SYNOPSIS
@@ -8,7 +8,7 @@ shell \- simple UNIX command interpreter
 .IR file ...
 .SH DESCRIPTION
 .B shell
-is a simple UNIX command interpreter. 
+is a simple UNIX command interpreter.
 .SH OPTIONS
 .TP
 .BR \-n ", " \-\-bits =\fIBITS\fR
