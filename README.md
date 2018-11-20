@@ -1,4 +1,4 @@
-.SH Simple Shell
+.TH Simple Shell
 The purpose of this project is to create a simple UNIX command interpreter
 
 .SH Getting Started
