@@ -4,7 +4,7 @@
  *Description: combine directory from PATH to the command
  *@directory : directory
  *@argument: input command
- *Return: pointer contain the string 1 and 2
+ *Return: Pointer that  contains the string 1 and 2
  */
 char *path_concate(char *directory, char *argument)
 
@@ -44,7 +44,7 @@ char *path_concate(char *directory, char *argument)
 /**
  * get_env - entry point
  * @env: enviroment variable
- * Description: get environment variables for no argument
+ * Description: get environment variables with no argument
  * Return: tokens
  */
 char *get_env(char **env)
@@ -92,7 +92,7 @@ char *get_env(char **env)
 /**
  * dir_only - entry point
  * @env: enviroment variable
- * Description: Split directory for no argument
+ * Description: Splits directory for no argument
  * Return: buffer
  */
 char **dir_only(char **env)
@@ -120,7 +120,7 @@ char **dir_only(char **env)
  * check_path - entry point
  * @directory: directory
  * @input:input
- * Description: check path
+ * Description: checks path
  * Return: full path or 0
  */
 char *check_path(char **directory, char *input)
