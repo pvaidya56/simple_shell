@@ -1,6 +1,6 @@
 #include "shell.h"
 /**
- *_loop - entry point
+ *_loop - Infinite Loop
  *Description: infinite loop waiting for the command
  *@env: loop with no command, or if needed, command is env
  */
