@@ -10,7 +10,7 @@
 int myexit(char **input)
 {
 	(void) input;
-	return (0);
+	exit (0);
 }
 
 /**
