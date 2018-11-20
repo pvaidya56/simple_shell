@@ -34,10 +34,10 @@ char *path_concate(char *directory, char *argument)
 	}
 	for (index1 = 0, index2 = 0; index1 < size1 + size2; index1++)
 	{
-		if (index1 < size1)
-			s[index1] = directory[index1];
-		else
-			s[index1] = argument[index2++];
+	if (index1 < size1)
+		s[index1] = directory[index1];
+	else
+		s[index1] = argument[index2++];
 	}
 	return (s);
 }
@@ -59,12 +59,12 @@ char *get_env(char **env)
 		b = 0;
 		while (env[c][b] == s[b])
 		{
-			if (env[c][b + 1] == s[b + 1])
-			{
-				start = env[c];
-				break;
-			}
-			b++;
+	if (env[c][b + 1] == s[b + 1])
+	{
+		start = env[c];
+		break;
+	}
+	b++;
 		}
 		c++;
 	}
@@ -75,14 +75,14 @@ char *get_env(char **env)
 	b = 0;
 	while (start[c] != '\0')
 	{
-		if (start[c] == ':')
-		{
-			buf[b] = '/';
-			b++;
-		}
-		buf[b] = start[c];
-		c++;
+	if (start[c] == ':')
+	{
+		buf[b] = '/';
 		b++;
+	}
+	buf[b] = start[c];
+	c++;
+	b++;
 	}
 	buf[b] = '/';
 	b++;
