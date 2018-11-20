@@ -15,14 +15,17 @@ void _loop(char **env)
 	{
 		prompt();
 		line = _getline();
-		if (line == "\0")
+		if (line == NULL)
 		{
 			free(line);
 			continue;
 		}
 		args = split_line(line);
 		directory = dir_only(env);
-		combine = check_path(directory, args[0]);
+		if (access(args[0], F_OK) == 0 && access(args[0], X_OK) == 0)
+			combine = args[0];
+		else
+			combine = check_path(directory, args[0]);
 		built_in_check(combine, args);
 		if (combine == NULL)
 			perror(combine);
