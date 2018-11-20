@@ -1,8 +1,8 @@
 #include "shell.h"
 /**
- *_getline - entry point
- *Description: create my getline function
- *Return: the input
+ *_getline - Takes input from user
+ *Description: Getline function
+ *Return: User Input
  */
 char *_getline(void)
 {
@@ -13,7 +13,7 @@ char *_getline(void)
 
 	if (input == NULL) /*allocate memory for input, if not, exit */
 		exit(1);
-	while (1) /*infinite loop, use getchar read character*/
+	while (1) /*infinite loop, use getchar to read character*/
 	{
 		a = _getchar();
 		if (a == EOF || a == '\n')
