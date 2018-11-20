@@ -1,6 +1,6 @@
 #include "shell.h"
 /**
- *env - entry point
+ *env - Prints env variable
  *@env: enviroment variable
  *Description: function to print out enviroment variable
  */
