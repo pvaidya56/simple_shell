@@ -10,7 +10,9 @@ shell \- simple UNIX command interpreter
 .B shell
 is a simple UNIX command interpreter.
 .SH OPTIONS
-.TP
-.BR \-n ", " \-\-bits =\fIBITS\fR
-Set the number of bits to modify.
-Default is one bit.
+.B -ls - Lists all files
+.B -ls -l - Lists all files in long format
+.B $PATH - returns the PATH
+.B exit - exits the shell
+.B env -Prints the current environment
+
