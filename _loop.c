@@ -30,8 +30,5 @@ void _loop(char **env)
 		if (combine == NULL)
 			perror(combine);
 	}
-	free(line);
-	free(args);
-	free(directory);
-	free(combine);
+	
 }
