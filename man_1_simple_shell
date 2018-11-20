@@ -1,0 +1,16 @@
+.TH SHELL 1
+.SH NAME
+shell \- simple UNIX command interpreter
+.SH SYNOPSIS
+.B shell
+[\fB\-n\fR \fIBITS\fR]
+[\fB\-\-bits\fR \fIBITS\fR]
+.IR file ...
+.SH DESCRIPTION
+.B shell
+is a simple UNIX command interpreter. 
+.SH OPTIONS
+.TP
+.BR \-n ", " \-\-bits =\fIBITS\fR
+Set the number of bits to modify.
+Default is one bit.
