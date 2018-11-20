@@ -1,6 +1,6 @@
 #include "shell.h"
 /**
- *prompt - entry point
+ *prompt - Prints prompt
  *Description : set up prompt
  *
  */
