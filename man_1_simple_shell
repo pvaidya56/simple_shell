@@ -1,4 +1,4 @@
-.TH SHELL 3 11/19/2018
+.TH SHELL 3
 .SH NAME
 shell \- simple UNIX command interpreter
 .SH SYNOPSIS
@@ -15,4 +15,4 @@ is a simple UNIX command interpreter.
 .B $PATH - returns the PATH
 .B exit - exits the shell
 .B env -Prints the current environment
-
+11/19/2018
