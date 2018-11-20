@@ -8,8 +8,7 @@
  */
 int main(int argc, char **argv, char **env)
 {
-	(void)argc;
-	(void)argv;
-	_loop(env);
+	if (argc == 1 || argv[1] == NULL)
+		_loop(env);
 	return (0);
 }
