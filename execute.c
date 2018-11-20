@@ -1,6 +1,6 @@
 #include "shell.h"
 /**
- *execute - entry point
+ *execute - Executes Functions
  *Description: execute after fork
  *@combine: combine directory and input
  *@input: input command
@@ -28,7 +28,7 @@ int execute(char *combine, char **input)
 		perror("No process: ");
 		return (-1);
 	}
-	else /* parrent*/
+	else /* parent*/
 	{
 		wait(NULL);
 	}
