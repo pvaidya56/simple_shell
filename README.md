@@ -37,7 +37,7 @@ Here are a list of **allowed functions and system calls:**
 
 # Compilation
 ### Your shell will be compiled this way:
-gcc -Wall -Werror -Wextra -pedantic *.c -o hsh
+**gcc -Wall -Werror -Wextra -pedantic *.c -o hsh**
 
 # Tasks
 
