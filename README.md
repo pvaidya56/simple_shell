@@ -39,27 +39,6 @@ Here are a list of **allowed functions and system calls:**
 ### Your shell will be compiled this way:
 gcc -Wall -Werror -Wextra -pedantic *.c -o hsh
 
-## Testing in interactive mode:
-$ ./hsh
-($) /bin/ls
-hsh main.c shell.c
-($)
-($) exit
-$
-
-## Testing in non-interactive mode:
-$ echo "/bin/ls" | ./hsh
-hsh main.c shell.c test_ls_2
-$
-$ cat test_ls_2
-/bin/ls
-/bin/ls
-$
-$ cat test_ls_2 | ./hsh
-hsh main.c shell.c test_ls_2
-hsh main.c shell.c test_ls_2
-$
-
 # Tasks
 
 #### 0. README.md, man, AUTHORS
@@ -72,7 +51,7 @@ $
 
 #### 2. Simple shell 0.1
      - Write a UNIX command line interpreter
-     ##### Your shell should:
+     Your shell should:
 
      - Display a prompt and wait for the user to type a command. A command line always ends with a new line.
      - The prompt is displayed again each time a command has been executed.
