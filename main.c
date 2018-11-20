@@ -1,6 +1,6 @@
 #include "shell.h"
 /**
- *main - entry
+ *main - Main funtion
  *@argc: argument count
  *@argv: argument
  *@env: implementation env
