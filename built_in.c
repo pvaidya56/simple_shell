@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * myexit - entry point
+ * myexit - Exits program
  * @input: input
  * Description: implementation of exit from the program
  * Return: 0 for success
@@ -14,7 +14,7 @@ int myexit(char **input)
 }
 
 /**
- * print_env - entry point
+ * print_env - Prints environment variable
  * @input: pointer to the command
  * Description: printout env
  * Return: 0 if success
@@ -34,7 +34,7 @@ int print_env(char **input)
 }
 
 /**
- * built_in_check - entry point
+ * built_in_check - Function that checks for built-ins 
  * @s: full string line
  * @input: input
  * Description: check for if built-in and function call
